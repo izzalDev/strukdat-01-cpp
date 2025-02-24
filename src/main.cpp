@@ -37,5 +37,11 @@ int main()
     {
         std::cout << i << " UDINUS" << std::endl;
     }
+    int j = 0;
+    do
+    {
+        j++;
+        std::cout << j << " UDINUS" << std::endl;
+    } while (j < 10);
     return 0;
 }
