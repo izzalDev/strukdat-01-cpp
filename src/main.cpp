@@ -33,5 +33,9 @@ int main()
             // break;
         }
     }
+    for (int i = 0; i < 10; i++)
+    {
+        std::cout << i << " UDINUS" << std::endl;
+    }
     return 0;
 }
