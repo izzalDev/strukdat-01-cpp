@@ -20,23 +20,23 @@ all: $(TARGET)
 
 # Compile binary
 $(TARGET): $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $@ $^
+	@$(CXX) $(CXXFLAGS) -o $@ $^
 
 # Compile setiap file .cpp menjadi .o
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp | $(BUILD_DIR)
-	$(CXX) $(CXXFLAGS) -c -o $@ $<
+	@$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 # Buat folder build jika belum ada
 $(BUILD_DIR):
-	mkdir -p $(BUILD_DIR)
+	@mkdir -p $(BUILD_DIR)
 
 # Bersihkan file .o dan binary
 clean:
-	rm -rf $(BUILD_DIR)
+	@rm -rf $(BUILD_DIR)
 
 # Jalankan program
 run: all
-	./$(TARGET)
+	@./$(TARGET)
 
 # Phony targets (tidak terkait file)
 .PHONY: all clean run
